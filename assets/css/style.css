@@ -14,6 +14,7 @@
 }
 /* variables */
 :root{
+    --xbox-color:#107C10;
     --h-color:#333;
     --e-color:#c90707;
     --s-color:#1e8206;
@@ -55,31 +56,34 @@ header{
     z-index: 100;
 }
 
-.nav{
+.navbar{
+    color: var(--bg-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 2px;
 }
 
-.logo{
+.navbar-brand{
+    pointer-events: none;
     font-size: 1.1rem;
     font-weight: 600;
     color: var(----sec-color);
-    /*text-transform: uppercase;*/
+    /* text-transform: uppercase; */
 }
 
-.logo .span1{
+
+.navbar-brand .span1{
     color: var(--h-color);
     font-size: 2rem;
     font-weight: 700;
 }
-.logo .span2{
+.navbar-brand .span2{
     color: var(--e-color);
     font-size: 1.4rem;
     font-weight: 700;
 }
-.logo .span3{
+.navbar-brand .span3{
     color: var(--s-color);
     font-size: 1.4rem;
     font-weight: 700;
@@ -203,6 +207,7 @@ header{
     margin-top: 2rem;
 }
 .section-title{
+    margin-top: 0.4rem;
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
@@ -224,7 +229,7 @@ header{
 .product-img{
     width: 100%;
     aspect-ratio: 1/1;
-    object-fit: cover;
+    object-fit: contain;
     margin-bottom: .5rem;
 }
 .product-title{
@@ -245,14 +250,112 @@ header{
     padding: 10px;
     cursor: pointer;
 }
-.add-cart::hover{
+.add-cart:hover{
     background-color: hsl(249, 32%, 17%);
 }
 
+.btn2{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--s-color);
+    color: #fff;
+    padding: .8rem 3rem;
+    border: .2rem solid var(--s-color);
+    cursor: pointer;
+    font-size: 1.7rem;
+}
 
+
+.btn2:hover{
+    background: var(--bg-color);
+    color: var(--s-color);
+}
+
+/* foooter */
+
+.contact{
+    background-color: var(--xbox-color);
+    color: var(--bg-color);
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.social-icons{
+    align-items: center;
+    padding: 2px;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+/* <home section */
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+}
+
+.home .content{
+    text-align: center;
+}
+
+.home .content h3{
+    font-size: 4.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .1);
+}
+
+.home .content p{
+    font-size: 2.5rem;
+    color: #fff;
+    padding: 0.5rem 0;
+}
+.home .video-container video{
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.home .controls{
+    padding: .5rem ;
+    border-radius: 5rem;
+    background: rgba(0, 0, 0, .7);
+    position: relative;
+    top: 4rem;
+
+}
+
+.home .controls .vid-btn{
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #fff;
+    cursor: pointer;
+    margin: 0 .5rem;
+    
+}
+.home .controls .vid-btn.active{
+    background: var(--s-color);
+}
 
 /* ======================== responsive & breakpoints ============== */
 @media(max-width: 1080px){
+    .product-box{
+        grid: row 2px; ;
+        box-sizing: border-box;
+    }
     .nav{
         padding: 15px;
     }
@@ -261,7 +364,7 @@ header{
         margin: 0 auto;
 
     }
-    section{
+    .section{
         padding: 3rem 0 2rem;
     }
     .shop{
@@ -269,7 +372,28 @@ header{
     }
 }
 /*for media devices */
+@media(max-width: 550px){
+    .shop-content{
+       
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    }
+    
+    .nav{
+        padding: 11px;
+    }
+    .logo{
+        font-size: 1rem;
+    }
+    .cart{
+        width: 320px;
+    }
+}
 @media(max-width: 400px){
+    .shop-content{
+       
+        grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    }
+    
     .nav{
         padding: 11px;
     }
@@ -282,6 +406,10 @@ header{
 }
 /*for small devices*/
 @media(max-width: 360px){
+    .shop-content{
+       
+        grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    }
     .shop{
         margin-top: 1rem;
     }

@@ -2,6 +2,7 @@
 const cartIcon = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");
 const closeCart = document.querySelector("#cart-close");
+let videoBtn = document.querySelectorAll('.vid-btn');
 
 
 cartIcon.addEventListener('click', ()=>{
@@ -26,6 +27,16 @@ function start(){
 
 }
 
+
+// =================== video control ===========================
+videoBtn.forEach(btn => {
+    btn.addEventListener('click',()=>{
+        document.querySelector('.controls .active').classList.remove('active');
+        btn.classList.add('active');
+        let src = btn.getAttribute('data-src');
+        document.querySelector('#video-slider').src = src;
+    });
+});
 
 // =========================== update & rerender=======================
 function update(){

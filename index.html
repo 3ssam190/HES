@@ -3,52 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>H ElectronicServices</title>
 
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- style  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+     crossorigin="anonymous">
     <link rel="stylesheet" href="assets\css\style.css">
 </head>
 <body>
-    <!-- header -->
+    <!-- nav -->
     <header>
-        <!-- nav -->
+
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#home"><span class="span1">H</span> <span class="span2">e</span>lectronic<span class="span3">S</span>ervices</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#latest">latest</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">CD'S</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Controllers</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Accessories</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#contact-us">Contact Us</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+        <!-- nav --
         <div class="nav container">
             <a href="#" class="logo"> <span class="span1">H</span> <span class="span2">e</span>lectronic<span class="span3">S</span>ervices</a>
-            <!-- cart icon -->
+            <!- -cart icon --
             <i class='bx bx-shopping-bag' id="cart-icon"></i>
         
-            <!-- cart -->
+            <!- - cart --
             <div class="cart">
                 <h2 class="cart-title">Your Cart</h2>
 
-                <!-- content -->
+                <!- - content --
                 <div class="cart-content">
                     
                 </div>
 
-                <!-- total -->
+                <!- - total --
                 <div class="total">
                     <div class="total-title">Total</div>
                     <div class="total-price">0 L.E</div>
                 </div>
-                <!-- buy button -->
+                <!- - buy button --
                 <button type="button" class="btn-buy">Buy Now</button>
-                <!-- cart close -->
+                <!- - cart close --
                 <i class='bx bx-x' id="cart-close"></i>
             </div>
-        </div>    
+        </div>   -->
     </header>
 
+
+    <section class="home" id="home">
+      <div class="content">
+          <h3>A place for all gamers</h3>
+          <p></p>
+          <a href="#" class="btn2">discover</a>
+      </div>
+  
+      <div class="controls">
+          <span class="vid-btn active" data-src="videos\vid1.mp4"></span>
+          <span class="vid-btn" data-src="videos\vid2.mp4"></span>
+          <span class="vid-btn" data-src="videos\vid3.mp4"></span>
+          <span class="vid-btn" data-src="videos\vid4.mp4"></span>
+          <span class="vid-btn" data-src="videos\vid5.mp4"></span>
+      </div>
+  
+      <div class="video-container">
+          <video src="videos\vid1.mp4" id="video-slider" loop autoplay muted></video>
+      </div>
+  </section>
 
     
     
 <!-- shop section -->
-<section class="shop container">
-    <h2 class="section-title">Shop Products</h2>
+<section class="shop container" id="latest">
+    <h2 class="section-title">Latest</h2>
 
     <!-- content -->
     <div class="shop-content">
@@ -56,14 +116,14 @@
         <div class="product-box">
             <img src="assets\img\product 1.png" alt="" class="product-img">
             <h2 class="product-title">Ps5 White Controller</h2>
-            <span class="product-price">2099 L.E</span>
+            <span class="product-price">2099 L.E</span> 
             <i class='bx bx-shopping-bag add-cart'></i>
         </div>
          <!-- box 2 -->
          <div class="product-box">
             <img src="assets\img\product 2.jpg" alt="" class="product-img">
             <h2 class="product-title">Wired Controller for PS4</h2>
-            <span class="product-price">475 L.E</span>
+            <span class="product-price"> 475 L.E </span>
             <i class='bx bx-shopping-bag add-cart'></i>
         </div>
          <!-- box 3 -->
@@ -91,14 +151,31 @@
     </div>
 </section>
 
+<!-- ========== contact us  section ================== -->
 
-
+<section class="contact" id="contact-us">
+  <div class="contact-us">
+    <h3>Follow us</h3>
+    <div class="social-icons">
+    <i class='bx bxl-facebook-circle' class="facebook"></i>
+    <i class='bx bxl-twitter' class="twitter"></i>
+    <i class='bx bxl-instagram' class="instagram"></i><br>
+    <i class='bx bxl-whatsapp-square' class="whatsapp"> 01552867234 </i>
+    <p>©H electornic services</p>
+    </div>
+  </div>
+</section>
 
 
 
 
     <!-- link js -->
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+    crossorigin="anonymous">
+    </script>
+    <script src="assets\js\vscript.js"></script>
     <script src="assets\js\main.js"></script>
 </body>
 </html>
