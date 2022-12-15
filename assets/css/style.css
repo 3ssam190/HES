@@ -275,7 +275,7 @@ header{
 /* foooter */
 
 .contact{
-    background-color: var(--xbox-color);
+    background-color: #808080;
     color: var(--bg-color);
     align-items: center;
     text-decoration: none;
@@ -285,10 +285,28 @@ header{
 }
 
 .social-icons{
+    text-decoration: none;
     align-items: center;
     padding: 2px;
     cursor: pointer;
     font-size: 1.4rem;
+}
+
+.social-icons a .bxl-facebook-circle{
+    color:  #3b5998;
+
+}
+
+.social-icons a .bxl-twitter{
+    color: #1DA1F2;
+}
+
+.social-icons a .bxl-instagram{
+    color: #8a3ab9;
+}
+
+.social-icons a .bxl-whatsapp-square{
+    color: 	#075E54;
 }
 /* <home section */
 
@@ -348,6 +366,17 @@ header{
 }
 .home .controls .vid-btn.active{
     background: var(--s-color);
+}
+
+
+
+/* ================cd section===================== */
+
+.cd-section {
+   /* padding: 50px 30%; */
+   display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
 }
 
 /* ======================== responsive & breakpoints ============== */
